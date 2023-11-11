@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="C:\Users\ALIREZA\Desktop\SabzLearn\styles\style.css"
+    />
+    <link rel="icon" href="https://sabzlearn.ir/wp-content/uploads/2023/08/cropped-sabz-fav-192x192.png" sizes="192x192">
+    <link rel="stylesheet" href="./cms-ui.css" />
+    <link rel="stylesheet" href="./cms-ui2.css" />
+    <link rel="stylesheet" href="./cms.css" />
+    <title>پنل مدیریت</title>
+  </head>
+  <body dir="rtl">
+    <div class="container">
+      <div class="messageBox">
+        <p class="ErrorMessage">Lorem ipsum dolor sit amet consectetur.</p>
+        <span></span>
+      </div>
+      <button class="OpenBtn">
+        <i class="fa fa-bars OpenBtnIcon"></i>
+      </button>
+      <aside class="panel">
+        <ul>
+          <li>
+            <a href="?id=1" class="paneLinks panelLinks1">تغییر لوگوی سایت</a>
+          </li>
+          <li>
+            <a href="?id=2" class="paneLinks panelLinks2"> گزینه های نوبار</a>
+          </li>
+          <li><a href="?id=3" class="paneLinks panelLinks3">رویداد ها</a></li>
+          <li><a href="?id=4" class="paneLinks panelLinks4">کاربران</a></li>
+          <li><a href="?id=5" class="paneLinks panelLinks5">اطلاعیه ها</a></li>
+          <li class="">
+            <button class="paneLinks panelLinks6 accordion-button">
+              دوره ها <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="accordion-items-container">
+              <a
+                href="?id=6"
+                class="accordion-item course-item paneLinks panelLinks7"
+                >دوره ها</a
+              >
+              <a
+                href="?id=7"
+                class="accordion-item offer-item paneLinks panelLinks8"
+                >تخفیف ها</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="?id=8" class="paneLinks panelLinks9">دسته بندی ها</a>
+          </li>
+        </ul>
+      </aside>
+      <section>
+        <a href="../../index.html" class="visitSiteBtn" target="_blank"
+          >بازدید سایت</a
+        >
+        <div class="section changeLogoSection">
+          <h2 class="SectionTitle">تغییر لوگوی سایت</h2>
+          <input type="file" name="file" id="file" class="chooseFile" />
+          <button class="changeLogoBtn">انتشار</button>
+
+          <div class="LogoBox">
+            <h3>لوگوی فعلی:</h3>
+            <img src="" class="Logo" alt="" />
+          </div>
+        </div>
+
+        <div class="section navbarLinksSection">
+          <h2>گزینه های نوبار</h2>
+
+          <div class="LinksSection">
+            <div class="linkNameBox">
+              <input
+                type="text"
+                class="OriginalMenuTextBox"
+                placeholder="عنوان منو رو وارد کنید"
+              />
+              <input
+                type="text"
+                class="OriginalMenuHrefTextBox"
+                placeholder="لینک منو را وارد کنید"
+              />
+              <button class="saveMenuBtn">انتشار</button>
+            </div>
+
+            <div class="manuItemBox">
+              <!-- <div class="menuItem">
+                <h3 class="menuName">فرانت اند</h3>
+                <div class="addNewSubmenuBox">
+                  <input type="text" class="addSubmenu" placeholder="عنوان زیرمنو رو وارد کنید" name="" id="">
+                  <button class="addSubmenuBtn">انتشار</button>
+                  <div class="submenuBox">
+                    <h4 class="submenu">تست 1</h4>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="section manageWarningsSection">
+          <h2 class="SectionTitle">رویداد ها</h2>
+          <input
+            type="text"
+            class="warningTextBox"
+            name=""
+            placeholder="متن رویداد را وارد کنید"
+            id=""
+          />
+          <button class="addWarningBtn">افزودن</button>
+          <div class="warnings">
+            <!-- <div class="warning-item">
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <button>del</button>
+            </div> -->
+          </div>
+        </div>
+        <div class="section usersListSection">
+          <h2 class="SectionTitle">کاربران</h2>
+          <div class="users"></div>
+
+          <!-- <div class="userItem">
+              <span class="ItemNumber">1</span>
+              <div class="userNames">
+                <p class="userNameElem">alireza nouri</p>
+                <span>کاربر</span>
+              </div>
+              <button class="removeUser">حذف</button>
+            </div> -->
+        </div>
+
+        <div class="section alertsSection">
+          <h2 class="SectionTitle">اطلاعیه ها</h2>
+          <input
+            type="text"
+            class="AlertTextBox"
+            name=""
+            placeholder="عنوان اطلاعیه را وارد کنید"
+            id=""
+          /><input
+          type="text"
+          class="AlertTitleTextBox"
+          name=""
+          placeholder="متن اطلاعیه را وارد کنید"
+          id=""
+        />
+          <div class="colorBox">
+            <p>رنگ اطلاعیه را وارد کنید:</p>
+            <span class="greenColor colorBtn" data-color=""></span>
+            <!-- <span class="pinkColor colorBtn" data-color=""></span> -->
+            <span class="redColor colorBtn" data-color=""></span>
+          </div>
+          <button class="addAlertBtn">افزودن</button>
+          <div class="Alerts">
+            <!-- <div class="alert-item">
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <button>del</button>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="section coursesSection">
+          <h2>دوره ها</h2>
+          <div class="course-form">
+            <h3>دوره موردنظر را اضافه کنید:</h3>
+            <label for="coruse-name">عنوان دوره: </label>
+            <input
+              type="text"
+              class="coruse-name"
+              name=""
+              id="coruse-name"
+              placeholder="عنوان دوره را وارد کنید"
+            />
+            <label for="coruse-img">تصویر دوره: </label>
+            <input
+              type="file"
+              class="coruse-img"
+              name=""
+              id="coruse-img"
+              placeholder="تصویر دوره را وارد کنید"
+            />
+            <label for="coruse-desc">توضیحات دوره: </label>
+            <textarea
+              name=""
+              id="coruse-desc"
+              class="coruse-desc"
+              placeholder="توضیحات دوره را وارد کنید"
+            ></textarea>
+
+            <label for="coruse-teacher">نام مدرس: </label>
+            <input
+              type="text"
+              class="coruse-teacher"
+              name=""
+              id="coruse-teacher"
+              placeholder="نام مدرس دوره را وارد کنید"
+            />
+
+            <label for="coruse-time">مدت زمان دوره: </label>
+            <input
+              type="text"
+              class="coruse-time"
+              name=""
+              id="coruse-time"
+              placeholder="مدت زمان دوره را وارد کنید"
+            />
+            <label for="coruse-price">قیمت دوره: </label>
+            <input
+              type="text"
+              class="coruse-price"
+              name=""
+              id="coruse-price"
+              placeholder="قیمت دوره را وارد کنید"
+            />
+
+            <label>دوره جز کدام دسته است؟ </label>
+            <div class="course-category-box">
+              <!-- <div class="Category-item">
+                <label for="1">فرانت اند</label>
+                <input type="checkbox" class="1" id="1">
+              </div> -->
+            </div>
+            <button class="add-course-btn">انتشار</button>
+          </div>
+
+          <div class="Product-Grid">
+            <!-- <div class="Product-Card">
+              <button class="courseDeleteBtn">حذف</button>
+              <span class="course-id"></span>
+              <div class="Card-header">
+                <img
+                  src="https://sabzlearn.ir/wp-content/uploads/2023/08/nodeJs-min-768x432.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="Card-Body">
+                <div class="Category-Box">
+                  <span>فرانت اند</span>
+                </div>
+                <h4 class="course-Name">
+                  <a href="">آموزش حرفه ای NodeJS بدون پیش نیاز</a>
+                </h4>
+                <p class="course-Desc">
+                  الان و امروز کمتر کسی هست که از بازار کار داغ نود جی اس با خبر
+                  نباشه و یکی از…
+                </p>
+                <div class="Course-Info">
+                  <div class="Teacher-Info">
+                    <i class="fa fa-user"></i>
+                    <span>محم امین سعیدی راد</span>
+                    <i class="fa fa-clock-o"></i>
+                    <span>88:25</span>
+                  </div>
+                  <div class="Course-Star">
+                    <i class="fa fa-star"></i>
+                    <span>5.0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="Card-Footer">
+                <div class="students-Box">
+                  <i class="fa fa-users"></i>
+                  <span class="Student-Number">268</span>
+                </div>
+                <h4 class="Course-Price">2,400,000 تومان</h4>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="section offerSection">
+          <h2>تخفیف ها</h2>
+          <div class="question-offer">
+            <h3>تخفیف روی کدام دوره اعمال شود؟</h3>
+            <div class="all-course-box">
+              <label for="all-course-input">همه دوره ها: </label>
+              <input
+                type="radio"
+                name="radio-input"
+                id="all-course-input"
+                class="radio-input all-course-input"
+              />
+              <div class="percentBox percentBox1">
+               <div class="inputBox1">
+                <label for="all-course-percent-input"
+                >میزان تحفیف را وارد کنید:</label
+              >
+              <input type="text" name="" id="all-course-percent-input" class="all-course-percent-input"placeholder="مثلا 60" />
+              <span>%</span>
+               </div>
+                <button class="set-offer-btn1">اعمال</button>
+              </div>
+            </div>
+
+            <div class="one-course-box">
+              <label for="one-course-input">فقط یک دوره: </label>
+              <input
+                type="radio"
+                name="radio-input"
+                id="one-course-input"
+                class="radio-input one-course-input"
+              />
+              <div class="course-id-box course-id-box2">
+                <div class="idBox">
+                  <label for="course-id-input">id دوره را وارد کنید: </label>
+                  <input type="text" name="" id="course-id-input" class="one-course-input-id" placeholder="مثلا 3" />
+                </div>
+                <div class="percentBox percentBox2">
+                  <label for="course-percent-input"
+                    >میزان تحفیف را وارد کنید:</label
+                  >
+                  <input type="text" name="" id="course-percent-input" class="course-percent-input" placeholder="مثلا 60" />
+                  <span>%</span>
+                </div>
+                <button class="set-offer-btn2">اعمال</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section categorySection">
+          <h2>دسته بندی ها</h2>
+          <input
+            type="text"
+            class="categoryInput"
+            name=""
+            id=""
+            placeholder="نام دسته بندی را وارد کنید"
+          />
+          <button class="addCategoryBtn">انتشار</button>
+          <div class="categoryBox">
+            <!-- <div class="CategoryItem">
+              <p class="categoryName">Lorem ipsum dolor sit amet consectetur.</p>
+              <button>خذف</button>
+            </div> -->
+          </div>
+        </div>
+
+
+        <h1 class="error404">404: چنین صفحه ای نداریم!</h1>
+      </section>
+    </div>
+    <script src="./cms-ui.js"></script>
+    <script src="./cms-ui2.js"></script>
+    <script src="./course & offer.js"></script>
+  </body>
+</html>

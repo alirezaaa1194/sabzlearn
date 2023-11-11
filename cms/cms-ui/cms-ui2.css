@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: IranSans;
+  box-sizing: border-box;
+  /* color: var(--TextLightColor); */
+  transition: 0.3s;
+}
+
+
+
+.messageBox {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: var(--Warning-bg-color);
+  font-family: IranSans;
+  position: fixed !important;
+  top: 20px;
+  left: -100%;
+  z-index: 999999 !important;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.messageBox p {
+  color: var(--TextLightColor);
+}
+.messageBox span {
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+@keyframes Error {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+.panel {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: var(--secondDynamicCoor);
+  padding: 12px;
+  box-shadow: 0px 0px 5px var(--SecondTextLightColor);
+  overflow-y: scroll;
+  display: block;
+  /* opacity: .4; */
+}
+.panel::-webkit-scrollbar {
+  /* display: none; */
+}
+.panel ul li {
+  width: 100%;
+  margin-top: 10px;
+}
+.panel ul li a,
+.panel ul li button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondDynamicCoor);
+  color: var(--TextLightColor);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: none !important;
+  /* margin: 0 !important; */
+}
+.panel ul li a:hover,
+.panel ul li button:hover {
+  background-color: var(--FerechexHoverColor) !important;
+}
+.panel ul li a.active,
+.panel ul li button.active {
+  background-color: var(--FerechexHoverColor) !important;
+}
+.OpenBtn {
+  padding: 0 !important;
+  position: fixed !important;
+  z-index: 999 !important;
+  display: none;
+  background-color: var(--secondDynamicCoor);
+  box-shadow: 0px 0px 5px var(--SecondTextLightColor);
+  width: 50px;
+  height: 40px;
+}
+.OpenBtn i {
+  color: var(--TextLightColor);
+}
+section {
+  width: 80%;
+  min-height: 100vh;
+  background-color: var(--primaryLightColor);
+  color: var(--TextLightColor);
+  position: relative;
+  right: 20%;
+  padding: 15px;
+}
+.visitSiteBtn{
+  position: fixed;
+  z-index: 999;
+  left: 20px;
+  top: 20px;
+  text-decoration: none;
+}
+.section h2 {
+  text-align: center;
+  margin: 0px 0 40px 0;
+}
+.usersListSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.categorySection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.accordion-items-container {
+  height: 0px;
+  overflow: hidden;
+  padding-right: 30px;
+}
+.accordion-items-container.active {
+  height: fit-content;
+  overflow: hidden;
+}
+.accordion-items-container a {
+  margin-top: 10px !important;
+}
+.accordion-button{
+  margin-top: 10px !important;
+}
+.coursesSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--borderColor);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+.course-form label {
+  margin: 30px 5px 7px 0;
+}
+.course-form textarea {
+  width: 70% !important;
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .panel {
+    right: -100%;
+    padding: 70px 12px;
+    width: 50%;
+  }
+  .OpenBtn {
+    display: block;
+    right: 20px;
+    top: 20px;
+  }
+  section {
+    padding: 70px 20px;
+    width: 100%;
+    right: 0;
+  }
+  .course-form {
+    align-items: center;
+  }
+  .course-form label{
+align-self: flex-start;
+margin-right: 7%;
+  }
+  .course-form textarea {
+    width: 90% !important;
+  }
+}
