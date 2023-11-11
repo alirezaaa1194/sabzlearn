@@ -17,6 +17,13 @@
 img {
   user-select: none;
 }
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent !important;
+}
 :root {
   --primaryLightColor: rgb(243 244 246);
   --TextLightColor: rgb(63 63 70);
