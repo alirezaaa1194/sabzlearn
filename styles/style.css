@@ -22,7 +22,7 @@ textarea,
 button,
 select,
 a {
-    -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 :root {
   --primaryLightColor: rgb(243 244 246);
@@ -654,7 +654,7 @@ main {
   align-items: flex-start;
   justify-content: center;
 }
-.warnig-section{
+.warnig-section {
   width: 100%;
 }
 .Warning-Box {
@@ -1340,10 +1340,17 @@ footer p {
     justify-content: space-between;
   }
   .LogoBox2 {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     padding: 0;
     margin: 0;
+  }
+  .LogoBox2 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .SiteSetting {
     position: relative;
@@ -1352,7 +1359,12 @@ footer p {
     justify-content: space-between;
   }
   .responsiveNavbar {
+    width: 53px;
+    height: 53px;
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
   .UserAccountBtn {
     margin: 0;
@@ -1380,19 +1392,18 @@ footer p {
     align-items: center;
     justify-content: center;
     margin: 0;
-  }
-  .Info-butto-Box {
     flex-wrap: wrap;
   }
   .Info-butto-Box a {
-    padding: 10px 15px;
+    padding: 7px 12px;
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 14px;
   }
   .Whois-Sabzlearn-Link i {
-    width: 52px;
-    height: 52px;
-    line-height: 52px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 15px;
   }
   .sitePictureInfo {
     order: 1;
