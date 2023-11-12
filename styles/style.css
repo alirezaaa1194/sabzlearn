@@ -417,7 +417,7 @@ header {
   cursor: pointer;
 }
 .navBody .searchBox2 input {
-  color: var(--activeMenuItem2Hover);
+  color: gray;
   width: 100% !important;
   background-color: var(--primaryLightColor);
   padding: 8px;
@@ -427,9 +427,11 @@ header {
   border: 1px solid var(--primaryLightColor);
   font-family: IranSans;
   font-size: 18px;
+  
 }
 .navBody .searchBox2 input:focus {
   border: 1px solid gray;
+  color: var(--TextLightColor);
 }
 .themeTitle {
   color: var(--SecondTextLightColor);
