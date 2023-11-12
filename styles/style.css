@@ -647,6 +647,9 @@ main {
   align-items: flex-start;
   justify-content: center;
 }
+.warnig-section{
+  width: 100%;
+}
 .Warning-Box {
   display: flex;
   align-items: center;
@@ -658,9 +661,17 @@ main {
   text-decoration: none;
   font-family: IranSans;
   border: 1px solid var(--Warning-bg-color);
+  width: fit-content;
+  max-width: 400px;
 }
 .Warning-Box:hover {
   border: 1px solid var(--hoverGreenColor);
+}
+.Warning-Text {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: fit-content !important;
 }
 .Warning-Box span:first-child {
   color: var(--hoverGreenColor);
@@ -1390,23 +1401,25 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 70%;
-    max-width: fit-content;
+    /* min-width: 70%; */
+    /* max-width: fit-content; */
+    width: 100%;
   }
   .Warning-Box {
-    width: 90%;
+    max-width: 100%;
+    justify-content: flex-start !important;
+  }
+  .Warning-Text {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: fit-content !important;
   }
   .Warning-Box span:first-child {
     margin: 0 3px;
   }
   .Warning-Box span:nth-child(2) {
     margin: 0px;
-  }
-  .Warning-Text {
-    white-space: nowrap !important;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 90%; /* تغییر این مقدار به عرض دلخواه شما بر حسب پیکسل */
   }
   .section2 {
     padding: 0 25px;
