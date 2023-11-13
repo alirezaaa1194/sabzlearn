@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s !important;
+  transition: all 0.25s !important;
   /* user-select: none; */
   scroll-behavior: smooth;
 }
@@ -434,6 +434,7 @@ header {
   color: var(--TextLightColor);
 }
 .themeTitle {
+  margin-right: 8px;
   color: var(--SecondTextLightColor);
 }
 .cover {
@@ -514,6 +515,8 @@ header {
   width: 20px;
 }
 .SwitchThemeBar {
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 8px;
 }
@@ -893,7 +896,7 @@ main {
   text-decoration: none;
   margin-left: 6px;
 }
-.Teacher-Info:hover a {
+.Teacher-Info a:hover {
   color: var(--hoverGreenColor);
 }
 .Teacher-Info i {
@@ -1353,6 +1356,9 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .LogoBox2 a img{
+    width: 85px;
   }
   .SiteSetting {
     position: relative;

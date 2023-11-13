@@ -699,7 +699,7 @@ function MenuAndsubmenuGenerator() {
 
 function removeMenu(event) {
   let removingMenu = NavabrLinksArray.findIndex(function (menuLink) {
-    return menuLink.menu == event.target.nextElementSibling.innerHTML;
+    return menuLink.menu == event.target.nextElementSibling.childNodes[0].innerHTML.trim();
   });
   NavabrLinksArray.splice(removingMenu, 1);
   MenuAndsubmenuGenerator();

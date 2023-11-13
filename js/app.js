@@ -358,9 +358,7 @@ function addWarningItem() {
 let NavigationBar = document.querySelector(".NavigationBar ul");
 
 if (
-  JSON.parse(localStorage.getItem("navbar")) !== null &&
-  JSON.parse(localStorage.getItem("navbar").length > 0)
-) {
+  JSON.parse(localStorage.getItem("navbar")) !== null) {
   NavabrLinksArray = JSON.parse(localStorage.getItem("navbar"));
   InsertNavbarItems();
 } else {
