@@ -245,9 +245,9 @@ button,
 .redColor {
   background-color: var(--bannerRedColor);
 }
-/* .pinkColor {
-  background-color: rgb(236 72 153);
-} */
+.yellowColor {
+  background-color: rgb(250 204 21);
+}
 .colorBox span.active {
   transform: scale(1.35);
 }

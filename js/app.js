@@ -313,7 +313,7 @@ function scrollToleft() {
 }
 let userNameElem = document.querySelector(".userName");
 
-setInterval(scrollToright, 3000);
+setInterval(scrollToright, 4000);
 
 exitBtn.addEventListener("click", function () {
   usersArray.forEach(function (user) {
@@ -357,8 +357,7 @@ function addWarningItem() {
 
 let NavigationBar = document.querySelector(".NavigationBar ul");
 
-if (
-  JSON.parse(localStorage.getItem("navbar")) !== null) {
+if (JSON.parse(localStorage.getItem("navbar")) !== null) {
   NavabrLinksArray = JSON.parse(localStorage.getItem("navbar"));
   InsertNavbarItems();
 } else {
@@ -585,6 +584,9 @@ function changeAlertTheme() {
       alerts.style.backgroundColor == "rgb(236, 72, 153)"
     ) {
       alerts.childNodes[1].childNodes[1].className = "fa fa-close";
+    } else if (alerts.style.backgroundColor == "rgb(250, 204, 21)") {
+      // console.log(alerts.childNodes[1].childNodes[1].innerHTML);
+      alerts.childNodes[1].childNodes[1].innerHTML='i'
     } else {
       // console.log(alerts.childNodes[1].childNodes[1]);
       alerts.childNodes[1].childNodes[1].className = "fa fa-check";

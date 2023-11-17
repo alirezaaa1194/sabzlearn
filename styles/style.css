@@ -85,6 +85,8 @@ body {
   margin: 6px 0;
 }
 .AlertBanner i {
+  font-style: normal !important;
+  font-weight: bold;
   border: 3px solid white;
   width: 40px;
   height: 40px;
@@ -1072,14 +1074,21 @@ main {
 }
 .Product-slider {
   width: 100%;
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 1;
+  grid-auto-flow: column;
   gap: 20px;
   overflow-x: scroll;
+  scroll-snap-type: x proximity !important;
   scroll-behavior: smooth;
   scrollbar-color: transparent transparent !important;
   border-radius: 1rem;
 }
-
+.Product-Card{
+  scroll-snap-align: center !important;
+}
 .Product-slider::-webkit-scrollbar {
   display: none;
 }
@@ -1322,6 +1331,7 @@ footer p {
 }
 .copy-Right-Box p {
   font-size: 1rem;
+  text-align: center;
 }
 .Linkbox3 a {
   direction: ltr;
@@ -1480,7 +1490,7 @@ footer p {
     padding: 25px;
   }
   .Product-slider .Product-Card {
-    min-width: 100% !important;
+    /* min-width: 100% !important; */
   }
   .slider-btn {
     display: none;
