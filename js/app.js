@@ -146,6 +146,7 @@ if (localStorage.getItem("LogoSource") !== null) {
       "https://sabzlearn.ir/wp-content/themes/sabzlearn-theme/images/logo.webp"
     );
   });
+  turnOffDragable();
 }
 
 function changeThemeMode() {
@@ -366,7 +367,7 @@ if (JSON.parse(localStorage.getItem("navbar")) !== null) {
       id: 1,
       menu: "فرانت اند",
       sunMenu:
-        "آموزش HTML, آموزش CSS, آموزش FlexBox, آموزش CSS Grid, آموزش Tailwind CSS, آموزش اصولی طراحی قالب, آموزش بوت استرپ, آموزش جاوااسکریپت, آموزش جامع ری اکت ReactJS, آموزش ویو جی اس, آموزش وی اس کد - Vscode, آموزش NPM",
+        "آموزش HTML, آموزش CSS, آموزش FlexBox, آموزش CSS Grid, آموزش Tailwind CSS, آموزش اصولی طراحی قالب, آموزش بوت استرپ, آموزش جاوااسکریپت, آموزش جامع ری اکت ReactJS, آموزش ویو جی اس, آموزش وی اس کد - Vscode, آموزش NPM, ",
       menuHref: "#",
       submenuHref: "#, #, #, #, #, #, #, #, #, #, #, #",
     },
@@ -374,7 +375,7 @@ if (JSON.parse(localStorage.getItem("navbar")) !== null) {
       id: 2,
       menu: "امنیت",
       sunMenu:
-        "نقشه راه ورود به دنیای هک و امنیت, شبکه با گرایش امنیت, لینوکس با گرایش امنیت, آموزش هکر قانونمند - CEH V11, آموزش کالی لینوکس, آموزش پایتون سیاه, آموزش Burp Suite, آموزش جاوااسکریپت سیاه",
+        "نقشه راه ورود به دنیای هک و امنیت, شبکه با گرایش امنیت, لینوکس با گرایش امنیت, آموزش هکر قانونمند - CEH V11, آموزش کالی لینوکس, آموزش پایتون سیاه, آموزش Burp Suite, آموزش جاوااسکریپت سیاه, ",
       menuHref: "#",
       submenuHref: "#, #, #, #, #, #, #, #, ",
     },
@@ -382,7 +383,7 @@ if (JSON.parse(localStorage.getItem("navbar")) !== null) {
       id: 3,
       menu: "پایتون",
       sunMenu:
-        "دوره آموزش پایتون, پروژه های کاربردی با پایتون, ترفند های کاربردی با پایتون, متخصص جنگو, مصور سازی داده با پایتون",
+        "دوره آموزش پایتون, پروژه های کاربردی با پایتون, ترفند های کاربردی با پایتون, متخصص جنگو, مصور سازی داده با پایتون, ",
       menuHref: "#",
       submenuHref: "#, #, #, #, #, ",
     },
@@ -397,7 +398,7 @@ if (JSON.parse(localStorage.getItem("navbar")) !== null) {
       id: 5,
       menu: "مقالات",
       sunMenu:
-        "اچ تی ام ال, بوت استرپ, پروژه های برنامه نویسی, تست نفوذ و امنیت وب, جی کوئری, ری اکت جی اس, سی اس اس, شروع برنامه نویسی, طراحی سایت, ویو جی اس",
+        "اچ تی ام ال, بوت استرپ, پروژه های برنامه نویسی, تست نفوذ و امنیت وب, جی کوئری, ری اکت جی اس, سی اس اس, شروع برنامه نویسی, طراحی سایت, ویو جی اس, ",
       menuHref: "#",
       submenuHref: "#, #, #, #, #, #, #, #, #, #",
     },
@@ -586,7 +587,7 @@ function changeAlertTheme() {
       alerts.childNodes[1].childNodes[1].className = "fa fa-close";
     } else if (alerts.style.backgroundColor == "rgb(250, 204, 21)") {
       // console.log(alerts.childNodes[1].childNodes[1].innerHTML);
-      alerts.childNodes[1].childNodes[1].innerHTML='i'
+      alerts.childNodes[1].childNodes[1].innerHTML = "i";
     } else {
       // console.log(alerts.childNodes[1].childNodes[1]);
       alerts.childNodes[1].childNodes[1].className = "fa fa-check";
@@ -596,4 +597,11 @@ function changeAlertTheme() {
 changeAlertTheme();
 function okAlertBtn(event) {
   event.target.parentElement.remove();
+}
+function turnOffDragable() {
+  let img = document.querySelectorAll("img");
+  img.forEach((pic) => {
+    pic.setAttribute("draggable", "false");
+    pic.setAttribute("loading", "lazy");
+  });
 }

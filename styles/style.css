@@ -127,9 +127,15 @@ header {
   display: flex;
 }
 .LogoBox {
-  padding-left: 15px;
-  margin-left: 15px;
+  padding-left: 20px;
+  /* margin-left: 20px; */
   border-left: 1px solid var(--borderColor);
+}
+
+.LogoBox1 a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .LogoBox img {
   width: 100px;
@@ -889,7 +895,7 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.Teacher-Info a {
+.Teacher-Info a, .document-Info a {
   color: var(--SecondTextLightColor);
   font-size: 13px;
   display: flex;
@@ -898,7 +904,7 @@ main {
   text-decoration: none;
   margin-left: 6px;
 }
-.Teacher-Info a:hover {
+.Teacher-Info a:hover, .document-Info a:hover {
   color: var(--hoverGreenColor);
 }
 .Teacher-Info i {
@@ -1163,6 +1169,10 @@ main {
   margin: 8px 0;
 }
 .document-Info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
   color: var(--SecondTextLightColor);
 }
 .document-Info i,
@@ -1564,6 +1574,11 @@ footer p {
   }
   .AlertBanner {
     display: none;
+  }
+}
+@media screen and (max-width:1000px) and (orientation:landscape){
+  .AlertBanner {
+    display: flex;
   }
 }
 @media screen and (min-width: 1440px) {

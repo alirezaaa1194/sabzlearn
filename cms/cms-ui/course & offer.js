@@ -149,8 +149,8 @@ function insertCourse() {
                   <a href="">
                   <i class="fa fa-user"></i>
                   <span>` +
-        course.teacher +
-        `</span>
+          course.teacher +
+          `</span>
         </a>
                     <i class="fa fa-clock-o"></i>
                     <span>` +
@@ -210,8 +210,8 @@ function insertCourse() {
               <a href="#">
               <img
                 src="` +
-        course.imgUrl +
-        `"
+          course.imgUrl +
+          `"
                 alt=""
               />
               </a>
@@ -303,8 +303,8 @@ function insertCourse() {
               <a href="#">
               <img
                 src="` +
-        course.imgUrl +
-        `"
+          course.imgUrl +
+          `"
                 alt=""
               />
               </a>
@@ -518,3 +518,12 @@ function setOfferToOne() {
     ErrorMessage.innerHTML = "لطفا فیلد را پرکنید!";
   }
 }
+
+function turnOffDragable() {
+  let img = document.querySelectorAll("img");
+  img.forEach((pic) => {
+    pic.setAttribute("draggable", "false");
+    pic.setAttribute("loading", "lazy");
+  });
+}
+turnOffDragable();

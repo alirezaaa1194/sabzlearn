@@ -1356,3 +1356,5 @@ if (freeCourse.length > 8) {
     //   });
   });
 }
+
+turnOffDragable()

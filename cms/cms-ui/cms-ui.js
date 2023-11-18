@@ -591,7 +591,7 @@ function AddMenuGenerator(event) {
       id: NavabrLinksArray.length + 1,
       menu: OriginalMenuTextBox.value,
       sunMenu: "",
-      menuHref: OriginalMenuHrefTextBox.value,
+      menuHref: "https://" + OriginalMenuHrefTextBox.value,
       submenuHref: "",
     });
     OriginalMenuTextBox.value = "";
@@ -610,17 +610,23 @@ function addSubmenuGenerator(event) {
     ErrorMessageSpan.style.background = "green";
     NavabrLinksArray.forEach(function (link) {
       if (
-        link.menu + " " ==
-        event.target.parentElement.previousElementSibling.childNodes[0]
-          .innerHTML
+        link.menu ==
+        event.target.parentElement.previousElementSibling.childNodes[0].innerHTML.trim()
       ) {
-        link.sunMenu += event.target.parentElement.childNodes[1].value + ", ";
-        link.submenuHref += event.target.previousElementSibling.value + ", ";
+        link.sunMenu +=
+          event.target.previousElementSibling.previousElementSibling.value.trim() +
+          ", ";
+        link.submenuHref +='https://'+
+          event.target.previousElementSibling.value.trim() + ", ";
+          // alert()
       }
     });
     // localStorage.setItem("navbar", JSON.stringify(NavabrLinksArray));
     MenuAndsubmenuGenerator();
   }
+  // else{
+  //   alertColor
+  // }
 }
 
 function addSubmenuByEnter1(event) {
@@ -680,13 +686,13 @@ function MenuAndsubmenuGenerator() {
     let submenuBox = document.querySelector(".submenuBox");
     newLinks.forEach(function (newLinks2) {
       if (newLinks2 != "") {
-        console.log(newSubHref[0]);
-        console.log("index:  " + newLinks.indexOf(newLinks2));
+        // console.log(newSubHref[0]);
+        // console.log("index:  " + newLinks.indexOf(newLinks2));
         submenuBox.insertAdjacentHTML(
           "beforeend",
           `<h4><span>` +
             newLinks2 +
-            ` </span><span class="hrefLabel">https://${
+            ` </span><span class="hrefLabel">${
               newSubHref[newLinks.indexOf(newLinks2)]
             }</span>
             <button class="removeUser" onclick="removeSubMenu(event)">حذف</button></h4>`
@@ -699,7 +705,10 @@ function MenuAndsubmenuGenerator() {
 
 function removeMenu(event) {
   let removingMenu = NavabrLinksArray.findIndex(function (menuLink) {
-    return menuLink.menu == event.target.nextElementSibling.childNodes[0].innerHTML.trim();
+    return (
+      menuLink.menu ==
+      event.target.nextElementSibling.childNodes[0].innerHTML.trim()
+    );
   });
   NavabrLinksArray.splice(removingMenu, 1);
   MenuAndsubmenuGenerator();
@@ -874,9 +883,8 @@ let categoryBox = document.querySelector(".categoryBox");
 
 if (JSON.parse(localStorage.getItem("Category")) !== null) {
   categoryArray = JSON.parse(localStorage.getItem("Category"));
-}
-else{
-  categoryArray.push('فرانت اند', 'بک اند', 'پایتون')
+} else {
+  categoryArray.push("فرانت اند", "بک اند", "پایتون");
   localStorage.setItem("Category", JSON.stringify(categoryArray));
 }
 
@@ -952,7 +960,7 @@ function ChangeAlertItemTheme() {
       if (alerts.style.backgroundColor == "rgb(236, 72, 153)") {
         alerts.style.backgroundColor = "rgb(239, 68, 68)";
       }
-      console.log(alerts);
+      // console.log(alerts);
     });
   } else {
     alertColor.forEach(function (alerts) {
