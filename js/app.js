@@ -369,7 +369,7 @@ if (JSON.parse(localStorage.getItem("navbar")) !== null) {
       sunMenu:
         "آموزش HTML, آموزش CSS, آموزش FlexBox, آموزش CSS Grid, آموزش Tailwind CSS, آموزش اصولی طراحی قالب, آموزش بوت استرپ, آموزش جاوااسکریپت, آموزش جامع ری اکت ReactJS, آموزش ویو جی اس, آموزش وی اس کد - Vscode, آموزش NPM, ",
       menuHref: "#",
-      submenuHref: "#, #, #, #, #, #, #, #, #, #, #, #",
+      submenuHref: "#, #, #, #, #, #, #, #, #, #, #, #, ",
     },
     {
       id: 2,
@@ -400,7 +400,7 @@ if (JSON.parse(localStorage.getItem("navbar")) !== null) {
       sunMenu:
         "اچ تی ام ال, بوت استرپ, پروژه های برنامه نویسی, تست نفوذ و امنیت وب, جی کوئری, ری اکت جی اس, سی اس اس, شروع برنامه نویسی, طراحی سایت, ویو جی اس, ",
       menuHref: "#",
-      submenuHref: "#, #, #, #, #, #, #, #, #, #",
+      submenuHref: "#, #, #, #, #, #, #, #, #, #, ",
     },
     {
       id: 6,

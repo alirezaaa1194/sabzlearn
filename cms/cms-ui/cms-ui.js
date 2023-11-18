@@ -616,9 +616,9 @@ function addSubmenuGenerator(event) {
         link.sunMenu +=
           event.target.previousElementSibling.previousElementSibling.value.trim() +
           ", ";
-        link.submenuHref +='https://'+
-          event.target.previousElementSibling.value.trim() + ", ";
-          // alert()
+        link.submenuHref +=
+          "https://" + event.target.previousElementSibling.value.trim() + ", ";
+        // alert()
       }
     });
     // localStorage.setItem("navbar", JSON.stringify(NavabrLinksArray));
@@ -669,11 +669,11 @@ function MenuAndsubmenuGenerator() {
       "afterbegin",
       `
 
-  <div class="menuItem">
+  <div class="menuItem" id="${link.id}">
   <button class="removeUser" onclick="removeMenu(event)">حذف</button>
               <h3 class="menuName"><span>` +
         link.menu +
-        ` </span><span class="menuLinkSpan">https://${link.menuHref}</span> </h3>
+        ` </span><span class="menuLinkSpan">${link.menuHref}</span> </h3>
               <div class="addNewSubmenuBox">
                 <input type="text" class="addSubmenu" onkeydown="addSubmenuByEnter1(event)"  placeholder="عنوان زیرمنو رو وارد کنید" name="" id="">
                 <input type="text" class="addSubmenu" placeholder="لینک زیرمنو رو وارد کنید" name="" id="">
@@ -717,20 +717,26 @@ function removeMenu(event) {
   ErrorMessageSpan.style.background = "red";
 }
 function removeSubMenu(event) {
-  NavabrLinksArray.forEach(function (menuLink) {
-    // alert(event.target.previousElementSibling.previousElementSibling.innerHTML.trim())
-    let splitedlink = menuLink.sunMenu.split(", ");
+  let menuItem=NavabrLinksArray.find(function (link) {
+    return link.id==event.target.parentElement.parentElement.parentElement.parentElement.id
+  });
+    let splitedlink = menuItem.sunMenu.split(', ');
+    let splitedSubmenuHref = menuItem.submenuHref.split(", ");
+    // console.log(menuLink);
     let submenuIndex = splitedlink.indexOf(
       event.target.previousElementSibling.previousElementSibling.innerHTML.trim()
     );
+    console.log(submenuIndex);
     splitedlink.splice(submenuIndex, 1);
+    splitedSubmenuHref.splice(submenuIndex, 1);
     splitedlink = splitedlink.join(", ");
-    menuLink.sunMenu = splitedlink;
+    splitedSubmenuHref = splitedSubmenuHref.join(", ");
+    menuItem.sunMenu = splitedlink;
+    menuItem.submenuHref = splitedSubmenuHref;
     showErrorMessage();
     ErrorMessage.innerHTML = "زیر منو حذف شد";
     ErrorMessageSpan.style.background = "red";
     MenuAndsubmenuGenerator();
-  });
 }
 
 let alertsArray = [];
@@ -865,7 +871,8 @@ Alerts.addEventListener("click", function (event) {
     let deleteAlertIndex = alertsArray.findIndex(function (alert) {
       return (
         alert.name ==
-        event.target.previousElementSibling.previousElementSibling.innerHTML
+        event.target.previousElementSibling.previousElementSibling.childNodes[1]
+          .innerHTML
       );
     });
     alertsArray.splice(deleteAlertIndex, 1);
