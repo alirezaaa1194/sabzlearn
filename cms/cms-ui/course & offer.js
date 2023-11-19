@@ -386,10 +386,17 @@ function removeCourseHandler(event) {
   let index = courseArray.findIndex(function (course) {
     return course.id == event.target.id;
   });
-  for (let i = index + 1; i < courseArray.length; i++) {
-    courseArray[i].id--;
-    console.log(courseArray[i].id);
-  }
+  // for (let i = index+1; i < courseArray.length; i++) {
+  //   courseArray[i].id--;
+  //   console.log(courseArray[i].id);
+  // }
+  let filteredCourse = courseArray.filter(function (course) {
+    return course.id > event.target.id;
+  });
+  filteredCourse.forEach(function (course) {
+    course.id--;
+  });
+  // console.log(index);
   courseArray.splice(index, 1);
   localStorage.setItem("courses", JSON.stringify(courseArray));
   insertCourse();
